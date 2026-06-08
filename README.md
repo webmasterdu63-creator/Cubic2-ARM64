@@ -201,11 +201,160 @@ Objectif : simplifier la création d’images ARM64 professionnelles, reproducti
 
     Support Docker ARM64 préinstallé
 
+🟦 Fonctionnalités ARM64 — Cubic2‑ARM64
+
+Cubic2‑ARM64 apporte un support complet, natif et automatique pour la création, la modification et la génération d’images ARM64 sur un système x86_64.
+Il s’agit du premier builder graphique ARM64 moderne, basé sur ubuntu-image, qemu-user-static et binfmt_misc.
+🟩 Détection automatique de l’architecture
+
+Cubic2‑ARM64 détecte automatiquement le type de source :
+
+    Rootfs ARM64
+
+    ISO ARM64
+
+    Image .img ARM64
+
+    Sources x86_64
+
+Le module detection/ analyse :
+
+    les binaires ELF
+
+    les partitions internes des images .img
+
+    les squashfs des ISO
+
+    les rootfs extraits
+
+Résultat : Cubic2 choisit automatiquement le mode ARM64 ou x86_64.
+🟧 Activation automatique de QEMU ARM64
+
+Lorsqu’une source ARM64 est détectée, Cubic2‑ARM64 active automatiquement :
+
+    qemu-aarch64-static
+
+    binfmt_misc
+
+    l’exécution transparente des binaires ARM64
+
+    l’injection de QEMU dans le chroot
+
+    la compatibilité totale ARM64 → x86_64
+
+Cela permet :
+
+    d’entrer dans un chroot ARM64 depuis un PC x86_64
+
+    d’installer des paquets ARM64
+
+    de configurer XFCE, KDE, GNOME, AI
+
+    de générer des images ARM64 fonctionnelles
+
+🟪 Support complet des images .img ARM64
+
+Cubic2‑ARM64 peut :
+
+    Monter une image ARM64
+
+    Mapper les partitions via kpartx
+
+    Lire le rootfs interne
+
+    Modifier le système ARM64
+
+    Repackager l’image finale
+
+Compatible avec :
+
+    Ubuntu Server ARM64
+
+    Ubuntu Raspberry Pi ARM64
+
+    Debian ARM64
+
+    Images personnalisées
+
+🟨 Backend moderne basé sur ubuntu-image
+
+Cubic2‑ARM64 utilise un backend moderne :
+
+    génération d’images .img ARM64
+
+    support des modèles gadget.yaml
+
+    support des manifest.yaml
+
+    compression optimisée
+
+    partitions GPT/MBR automatiques
+
+    support Raspberry Pi / ARM64 générique
+
+🟦 Polkit intégré (optionnel)
+
+Pour éviter l’utilisation de sudo, Cubic2‑ARM64 inclut :
+
+    une règle polkit dédiée
+
+    un wrapper sécurisé pour kpartx
+
+    une autorisation graphique
+
+    un fonctionnement propre et professionnel
+
+🟩 Fonctionnalités avancées ARM64
+
+    Chroot ARM64 complet
+
+    Installation de paquets ARM64 depuis un PC x86_64
+
+    Support complet APT ARM64
+
+    Personnalisation du système ARM64
+
+    Ajout de kernels ARM64
+
+    Configuration du bootloader ARM64
+
+    Support des overlays Raspberry Pi
+
+    Génération d’images prêtes à booter
+
+🟧 Fonctionnalités x86_64 conservées
+
+Cubic2‑ARM64 reste compatible avec :
+
+    ISO x86_64
+
+    rootfs x86_64
+
+    builds classiques
+
+    squashfs
+
+    customisation Ubuntu/Debian x86_64
+
+🟪 Résumé
+
+Cubic2‑ARM64 est :
+
+    le premier builder graphique ARM64 complet
+
+    compatible x86_64 + ARM64
+
+    basé sur ubuntu-image
+
+    capable de chrooter ARM64 depuis un PC x86_64
+
+    capable de générer des images ARM64 bootables
+
+    automatisé, propre, professionnel
 
 
-
-
-# Cubic
+********************************************************************************************************************************************************
+# Cubic 1 ISO x86 uniquement
 
 <img src="https://github.com/PJ-Singh-001/Cubic/blob/release/screenshots/cubic_512x512.png" height="128"/>
 
