@@ -381,6 +381,159 @@ Cubic2‑ARM64 est :
 
     automatisé, propre, professionnel
 
+🚀 Usage
+
+Cette section explique comment utiliser Cubic2‑ARM64 pour charger une source, détecter l’architecture, activer QEMU ARM64 et générer une image finale.
+1. Lancer Cubic2‑ARM64
+
+Depuis le dossier src/ :
+bash
+
+cd Cubic2-ARM64/src/
+python3 cubic2.py <chemin ISO/IMG/rootfs>
+
+Exemple :
+bash
+
+python3 cubic2.py ~/Téléchargements/ubuntu-24.04.3-preinstalled-server-arm64+raspi.img
+
+2. Charger une ISO / IMG / rootfs
+
+Cubic2‑ARM64 accepte :
+
+    ISO Ubuntu/Debian x86_64
+
+    ISO ARM64
+
+    Images .img ARM64 (Raspberry Pi, Ubuntu Server ARM64, etc.)
+
+    Dossiers rootfs extraits
+
+Le programme détecte automatiquement le type de source.
+3. Détection automatique de l’architecture
+
+Lors du chargement, Cubic2‑ARM64 analyse :
+
+    les binaires ELF
+
+    les partitions internes (via kpartx)
+
+    les squashfs des ISO
+
+    les rootfs ARM64
+
+Résultat :
+Code
+
+[INFO] Architecture détectée : arm64
+
+ou :
+Code
+
+[INFO] Architecture détectée : x86_64
+
+4. Activation automatique de QEMU ARM64
+
+Si la source est ARM64 :
+
+    qemu-aarch64-static est injecté dans le chroot
+
+    binfmt_misc est activé
+
+    l’exécution ARM64 devient transparente
+
+    le chroot ARM64 fonctionne sur un PC x86_64
+
+Cubic2‑ARM64 affiche :
+Code
+
+[INFO] QEMU ARM64 activé avec succès.
+
+5. Modifier le système ARM64
+
+Une fois le rootfs monté et QEMU activé, vous pouvez :
+
+    installer des paquets ARM64
+
+    ajouter XFCE, KDE, GNOME
+
+    intégrer des outils IA
+
+    personnaliser le système
+
+    modifier les services
+
+    changer le kernel ARM64
+
+6. Générer l’image finale
+
+Cubic2‑ARM64 utilise un backend moderne basé sur ubuntu-image :
+
+    génération d’images .img ARM64
+
+    support des fichiers manifest.yaml
+
+    support des gadget.yaml
+
+    partitions GPT/MBR automatiques
+
+    compression optimisée
+
+La génération ARM64 est automatique lorsque la source est ARM64.
+🟧 SECTION : Roadmap — Cubic2‑ARM64
+
+(à coller telle quelle dans ton README)
+🛣️ Roadmap Cubic2‑ARM64
+✔️ Fonctionnalités déjà implémentées
+
+    [x] Détection automatique ARM64 / x86_64
+
+    [x] Support des images .img ARM64
+
+    [x] Montage/démontage via kpartx
+
+    [x] Activation automatique de QEMU ARM64
+
+    [x] Injection de qemu-aarch64-static dans le chroot
+
+    [x] Support complet du chroot ARM64 sur PC x86_64
+
+    [x] Polkit pour exécuter kpartx sans sudo
+
+    [x] Backend ubuntu-image (préparation)
+
+    [x] Structure du projet modulaire (detection/, backend/)
+
+🚧 Fonctionnalités en cours
+
+    [ ] Interface graphique GTK4/Qt6
+
+    [ ] Backend ubuntu-image complet (gadget.yaml + manifest.yaml)
+
+    [ ] Génération d’images Raspberry Pi ARM64
+
+    [ ] Support Debian ARM64
+
+    [ ] Compression SquashFS optimisée ARM64
+
+    [ ] Gestion avancée des partitions ARM64
+
+    [ ] Mode “AI Edition” (TensorFlow Lite, ONNX Runtime ARM64)
+
+🎯 Fonctionnalités futures
+
+    [ ] Mode multi-architecture (x86_64 ↔ ARM64)
+
+    [ ] Création d’images cloud ARM64 (KVM, LXD, Proxmox)
+
+    [ ] Génération d’images UEFI ARM64 génériques
+
+    [ ] Support des overlays Raspberry Pi
+
+    [ ] Intégration d’un éditeur de manifest YAML
+
+    [ ] Mode “Live ISO ARM64” (expérimental)
+
 
 ********************************************************************************************************************************************************
 # Cubic 1 ISO x86 uniquement
