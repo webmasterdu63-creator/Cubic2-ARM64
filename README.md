@@ -1,3 +1,125 @@
+
+Section Installation — Cubic2‑ARM64
+1. Prérequis système
+
+Cubic2‑ARM64 fonctionne sur :
+
+    Ubuntu 22.04 / 24.04 (x86_64)
+
+    Linux Mint 21 / 22
+
+    Debian 12
+
+    KDE Neon
+
+    Tout système x86_64 avec support binfmt_misc
+
+Assurez-vous que votre système est à jour :
+bash
+
+sudo apt update && sudo apt upgrade -y
+
+2. Dépendances obligatoires
+2.1 QEMU ARM64 + binfmt-support
+
+Ces paquets permettent d’exécuter des binaires ARM64 sur un PC x86_64.
+bash
+
+sudo apt install -y qemu-user-static binfmt-support
+
+Vérifiez que le support ARM64 est actif :
+bash
+
+ls /proc/sys/fs/binfmt_misc/qemu-aarch64
+
+Si le fichier existe → QEMU ARM64 est opérationnel.
+2.2 Outils de montage d’images .img
+
+Cubic2‑ARM64 utilise kpartx pour mapper les partitions internes des images ARM64 (Raspberry Pi, Ubuntu Server ARM64, etc.).
+bash
+
+sudo apt install -y kpartx
+
+2.3 Outils de compression / extraction
+bash
+
+sudo apt install -y squashfs-tools xorriso
+
+3. Installation de Cubic2‑ARM64
+
+Clonez le projet :
+bash
+
+git clone https://github.com/<votre_repo>/Cubic2-ARM64.git
+cd Cubic2-ARM64
+
+4. Structure du projet
+Code
+
+Cubic2-ARM64/
+ ├── src/
+ │    ├── cubic2.py
+ │    ├── detection/
+ │    │     ├── arch.py
+ │    │     ├── rootfs.py
+ │    │     ├── iso.py
+ │    │     ├── img.py
+ │    │     └── __init__.py
+ │    └── backend/ (optionnel)
+ ├── polkit/
+ └── README.md
+
+5. Activation Polkit (recommandé)
+
+Pour éviter d’utiliser sudo dans le terminal, Cubic2‑ARM64 peut utiliser polkit pour autoriser automatiquement :
+
+    kpartx
+
+    mount
+
+    umount
+
+    losetup
+
+Copiez la règle polkit :
+bash
+
+sudo cp polkit/com.cubic2.kpartx.policy /usr/share/polkit-1/actions/
+
+Installez le wrapper sécurisé :
+bash
+
+sudo cp polkit/cubic2-kpartx /usr/local/bin/
+sudo chmod +x /usr/local/bin/cubic2-kpartx
+
+6. Lancer Cubic2‑ARM64
+
+Depuis le dossier src/ :
+bash
+
+cd src/
+python3 cubic2.py <chemin ISO/IMG/rootfs>
+
+Exemple :
+bash
+
+python3 cubic2.py ~/Téléchargements/ubuntu-24.04.3-preinstalled-server-arm64+raspi.img
+
+7. Fonctionnement ARM64
+
+Lorsqu’une source ARM64 est détectée :
+
+    QEMU ARM64 est automatiquement activé
+
+    qemu-aarch64-static est injecté dans le chroot
+
+    Le rootfs ARM64 devient utilisable sur un PC x86_64
+
+    Le backend ARM64 (ubuntu-image) peut générer une image .img
+
+
+
+
 Cubic2‑ARM64 — TN365 ARM Image Builder
 
 Cubic2‑ARM64 est un fork modernisé de Cubic, conçu pour créer des images Ubuntu ARM64 personnalisées.  
