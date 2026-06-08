@@ -1,3 +1,28 @@
+<p align="center">
+
+  <!-- Version -->
+  <img src="https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge" />
+
+  <!-- Architecture -->
+  <img src="https://img.shields.io/badge/ARM64-SUPPORTED-success?style=for-the-badge&logo=linux" />
+  <img src="https://img.shields.io/badge/x86__64-SUPPORTED-success?style=for-the-badge&logo=linux" />
+
+  <!-- QEMU -->
+  <img src="https://img.shields.io/badge/QEMU-Required-important?style=for-the-badge&logo=qemu" />
+
+  <!-- Ubuntu Image -->
+  <img src="https://img.shields.io/badge/ubuntu--image-Backend-orange?style=for-the-badge&logo=ubuntu" />
+
+  <!-- Python -->
+  <img src="https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge&logo=python" />
+
+  <!-- License -->
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+
+  <!-- Status -->
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
+
+</p>
 
 Section Installation — Cubic2‑ARM64
 1. Prérequis système
