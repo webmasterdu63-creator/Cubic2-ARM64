@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://img.shields.io/badge/Cubic2--ARM64-Build%20System%20Next--Gen-blueviolet?style=for-the-badge&logo=ubuntu" />
+</p>
+
+<p align="center">
 
   <!-- Version -->
   <img src="https://img.shields.io/badge/version-2.0.0-blue?style=for-the-badge" />
