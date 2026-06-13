@@ -165,9 +165,16 @@ The graphical interface will start immediately.
 For any question or assistance:
 contact@technews365.fr
 
+## 📸 Capture d’écran – Accueil Cubic 2
+
+<p align="center">
+  <img src="cubic2-home.png" width="70%">
+</p>
+
+
 ## 🔗 Cubic (version originale)
 <p align="center">
-  <img src="https://raw.githubusercontent.com/webmasterdu63-creator/Cubic2-ARM64/release/cubic.png" width="120" alt="Cubic Original Logo">
+  <img src="https://raw.githubusercontent.com/webmasterdu63-creator/Cubic2-ARM64/release/cubic.png" width="240" alt="Cubic Original Logo">
 </p>
 
 Cubic2‑ARM64 est basé sur le projet original **Cubic** développé par PJ-Singh.
