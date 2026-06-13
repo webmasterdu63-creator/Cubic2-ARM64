@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/webmasterdu63-creator/Cubic2-ARM64/release/logo2.jpeg" width="180" alt="Cubic2-ARM64 Logo">
+  <img src="https://raw.githubusercontent.com/webmasterdu63-creator/Cubic2-ARM64/release/logo2.jpeg" width="280" alt="Cubic2-ARM64 Logo">
 </p>
 
 <p align="center">
