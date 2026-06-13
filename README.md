@@ -160,3 +160,16 @@ The graphical interface will start immediately.
 
 For any question or assistance:
 contact@technews365.fr
+
+## 🔗 Cubic (version originale)
+
+Cubic2‑ARM64 est basé sur le projet original **Cubic** développé par PJ-Singh.
+
+➡️ Version originale de Cubic :  
+https://github.com/PJ-Singh-001/Cubic
+## 🔗 Original Cubic project
+
+Cubic2‑ARM64 is based on the original **Cubic** project by PJ-Singh.
+
+➡️ Original Cubic repository:  
+https://github.com/PJ-Singh-001/Cubic
