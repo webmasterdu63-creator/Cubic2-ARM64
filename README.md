@@ -83,3 +83,80 @@ sudo apt install -y squashfs-tools xorriso
 - [Download CUBIC2‑ARM64 (ZIP)](https://php.technews365.fr/downloads/Cubic2-ARM64-TN365.zip)
 - [Download CUBIC2‑ARM64 (TAR.GZ)](https://php.technews365.fr/downloads/Cubic2-ARM64-TN365.tar.gz)
 
+🇫🇷 Notice d’utilisation — Cubic2‑ARM64
+
+📦 Extraction de l’archive Windows
+
+    Clic droit sur le fichier téléchargé (.zip ou .tar.gz)
+
+    Sélectionnez “Extraire tout…”
+
+    Ouvrez le dossier extrait
+
+Linux
+Code
+
+unzip Cubic2-ARM64-TN365.zip
+
+ou :
+Code
+
+tar -xvf Cubic2-ARM64-TN365.tar.gz
+
+macOS
+
+    Double‑cliquez sur le fichier .zip
+
+    macOS extrait automatiquement le dossier
+
+▶️ Lancement de Cubic2‑ARM64
+
+Dans le dossier extrait :
+Code
+
+python3 cubic2.py
+
+L’interface graphique s’ouvre immédiatement.
+📧 Support / Contact
+
+Pour toute question ou assistance :
+contact@technews365.fr
+🇬🇧 User Guide — Cubic2‑ARM64
+
+(English version to place right under the French one)
+📦 Extracting the archive Windows
+
+    Right‑click the downloaded file (.zip or .tar.gz)
+
+    Select “Extract All…”
+
+    Open the extracted folder
+
+Linux
+Code
+
+unzip Cubic2-ARM64-TN365.zip
+
+or:
+Code
+
+tar -xvf Cubic2-ARM64-TN365.tar.gz
+
+macOS
+
+    Double‑click the .zip file
+
+    macOS extracts it automatically
+
+▶️ Running Cubic2‑ARM64
+
+Inside the extracted folder:
+Code
+
+python3 cubic2.py
+
+The graphical interface will start immediately.
+📧 Support / Contact
+
+For any question or assistance:
+contact@technews365.fr
