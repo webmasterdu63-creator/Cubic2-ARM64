@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/webmasterdu63-creator/Cubic2-ARM64/release/logo2.jpeg" width="180" alt="Cubic2-ARM64 Logo">
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Cubic2--ARM64-Build%20System%20Next--Gen-blueviolet?style=for-the-badge&logo=ubuntu" />
 </p>
 
